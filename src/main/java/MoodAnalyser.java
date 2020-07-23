@@ -5,15 +5,17 @@ public class MoodAnalyser {
         message = "default";
     }
 
-    public String MoodAnalyser(String message) {
+    public void MoodAnalyser(String message) {
         this.message = message;
-        return analyseMood("sad");
     }
 
     public String analyseMood(String message) {
-        return "sad";
+        try {
+            return "Sad";
+        } catch (NullPointerException e) {
+            return "Happy";
+        }
     }
+
 }
-
-
 
