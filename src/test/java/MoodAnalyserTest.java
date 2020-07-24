@@ -1,26 +1,25 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class MoodAnalyserTest {
     @Test
-    public void testMoodAnalyserSad() {
+    public void giveMessageContainsSad_ReturnSad() {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
         String mood = moodAnalyser.analyseMood("Iam in sad mood");
         Assert.assertEquals("sad", mood);
+
     }
 
     @Test
-    public void testMoodAnalyserAnyMood() {
+    public void giveMessageContainsAny_ReturnsHappy() {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = moodAnalyser.analyseMood("Iam in happy mood");
-        Assert.assertEquals("Happy", mood);
-
-    }
-    @Test
-    public void NullMethod() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = moodAnalyser.analyseMood(null);
-        //Assert.assertEquals("Happy", mood);
+        String mood = moodAnalyser.analyseMood("Iam in Any mood");
+        Assert.assertEquals("Happy",mood);
 
     }
 }
+
+
+                    
